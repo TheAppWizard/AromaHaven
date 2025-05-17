@@ -1,0 +1,54 @@
+<svg width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for the steam -->
+    <linearGradient id="steamGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Drop shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Coffee Cup -->
+  <g filter="url(#shadow)">
+    <!-- Cup body -->
+    <ellipse cx="110" cy="160" rx="45" ry="10" fill="#d9d9d9" />
+    <path d="M65 90 Q60 160 110 160 Q160 160 155 90 Z" fill="#f5f5f5" stroke="#ccc" stroke-width="2"/>
+    <!-- Coffee surface -->
+    <ellipse cx="110" cy="90" rx="43" ry="8" fill="#6f4e37" />
+    <!-- Handle -->
+    <path d="M155 100 Q180 110 155 130" fill="none" stroke="#f5f5f5" stroke-width="10"/>
+  </g>
+
+  <!-- Animated Steam -->
+  <g>
+    <path d="M100 70 C95 60, 105 50, 100 40" stroke="url(#steamGradient)" stroke-width="3" fill="none">
+      <animateTransform attributeName="transform"
+        type="translate"
+        values="0,0; 0,-30"
+        dur="3s"
+        repeatCount="indefinite"
+        additive="sum"/>
+      <animate attributeName="opacity"
+        values="1;0"
+        dur="3s"
+        repeatCount="indefinite" />
+    </path>
+
+    <path d="M120 70 C115 60, 125 50, 120 40" stroke="url(#steamGradient)" stroke-width="3" fill="none">
+      <animateTransform attributeName="transform"
+        type="translate"
+        values="0,0; 0,-30"
+        dur="3.2s"
+        repeatCount="indefinite"
+        additive="sum"/>
+      <animate attributeName="opacity"
+        values="1;0"
+        dur="3.2s"
+        repeatCount="indefinite" />
+    </path>
+  </g>
+</svg>
